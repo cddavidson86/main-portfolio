@@ -2514,7 +2514,7 @@
   vertical-align: middle;
   -webkit-transform: perspective(1px) translateZ(0);
   transform: perspective(1px) translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  box-shadow: 0 0 1px rgba(0, 65, 45, 0);
   position: relative;
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
@@ -2526,13 +2526,13 @@
   position: absolute;
   z-index: -1;
   content: '';
-  top: 100%;
+  top: 90%;
   left: 5%;
   height: 10px;
   width: 90%;
   opacity: 0;
-  background: -webkit-radial-gradient(center, ellipse, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 80%);
-  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 80%);
+  background: -webkit-radial-gradient(center, ellipse, rgba(255, 255, 255, 0.35) 0%, rgba(0, 139, 121, 0) 80%);
+  background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.35) 0%, rgba(0, 131, 109, 0) 80%);
   /* W3C */
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
