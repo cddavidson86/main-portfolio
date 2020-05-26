@@ -141,7 +141,7 @@ $(window).on('scroll', function () {
         gridScrollUp = false;
         anime({
             targets: '.anime-grid',
-            width: '100%',
+            width: '101%',
             delay: '2000'
         })
         anime({
@@ -187,7 +187,7 @@ var descFade = 1000;
 
 // Cater Card
 var caterCard = false;
-var caterScroll = 1000;
+var caterScroll = 900;
 $(window).on('scroll', function () {
     if (Math.round($(window).scrollTop()) >= caterScroll && caterCard == false) {
         anime({
@@ -227,7 +227,7 @@ $(window).on('scroll', function () {
 
 // Cine Card
 var cineCard = false;
-var cineScroll = 1500;
+var cineScroll = 1400;
 $(window).on('scroll', function () {
     if (Math.round($(window).scrollTop()) >= cineScroll && cineCard == false) {
         anime({
@@ -351,15 +351,29 @@ $(".hover-on").mouseover(function () {
 // Icon Animation 
 var iconTrigger = false;
 $(window).on('scroll', function () {
-    if (Math.round($(window).scrollTop()) > 3900 && iconTrigger == false) {
+    if (Math.round($(window).scrollTop()) > 2500 && iconTrigger == false) {
         anime({
             targets: '.icon-anime',
-            translateX: [
-                { value: 650, duration: 1000, delay: 500 },
-                { value: 0, duration: 1000, delay: 500 }
-              ],
+            translateX: 1200,
+            translateY: -1200,
+            easing: 'easeInOutQuad',
+            delay: anime.stagger(130),
         });
         iconTrigger = true;
+    }
+});
+
+// Icon Animation 
+var footerFade = false;
+$(window).on('scroll', function () {
+    if (Math.round($(window).scrollTop()) > 2900 && footerFade == false) {
+        anime({
+            targets: '#info-icons',
+            opacity: 1,
+            duration: '1500',
+            easing: 'easeInOutQuad'
+        });
+        footerFade = true;
     }
 });
 
