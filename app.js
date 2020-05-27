@@ -351,13 +351,13 @@ $(".hover-on").mouseover(function () {
 // Icon Animation 
 var iconTrigger = false;
 $(window).on('scroll', function () {
-    if (Math.round($(window).scrollTop()) > 2500 && iconTrigger == false) {
+    if (Math.round($(window).scrollTop()) > 2300 && iconTrigger == false) {
         anime({
             targets: '.icon-anime',
             translateX: 1200,
             translateY: -1200,
             easing: 'easeInOutQuad',
-            delay: anime.stagger(130),
+            delay: anime.stagger(100),
         });
         iconTrigger = true;
     }
@@ -376,6 +376,34 @@ $(window).on('scroll', function () {
         footerFade = true;
     }
 });
+
+// Icon color change 
+$(function() {
+    $('#icon-1').hover(function() {
+      $('#icon-1 i').css('color', '#F0F0F0');
+    }, function() {
+      // on mouseout, reset the background colour
+      $('#icon-1 i').css('color', '#7e7e7e');
+    });
+  });
+  $(function() {
+    $('#icon-2').hover(function() {
+      $('#icon-2 i').css('color', '#F0F0F0');
+    }, function() {
+      // on mouseout, reset the background colour
+      $('#icon-2 i').css('color', '#7e7e7e');
+    });
+  });
+  $(function() {
+    $('#icon-3').hover(function() {
+      $('#icon-3 i').css('color', '#F0F0F0');
+    }, function() {
+      // on mouseout, reset the background colour
+      $('#icon-3 i').css('color', '#7e7e7e');
+    });
+  });
+
+
 
 
 

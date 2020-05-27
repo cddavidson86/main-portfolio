@@ -17,7 +17,7 @@ element {}
     --font-1: #F0F0F0;
     --font-2: #191919;
     --font-3: #000000;
-    --font-4: #eeeeee;
+    --font-4: #3f3f3f;
 }
 
 html {
@@ -31,7 +31,9 @@ html, body {
 body {
     margin: 0 auto;
     overflow-x: hidden;
-    font-family: 'Alegreya Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    /* font-family: 'Roboto Slab', serif;
+    font-family: 'Rubik', sans-serif; */
     font-size: 1em;
     font-weight: 100;
     color: var(--font-1);
@@ -43,7 +45,12 @@ div {
 }
 
 h1, h2, h3, h4, h5 {
+    font-family: 'Rubik', sans-serif;
     color: var(--font-1);
+}
+
+.badge {
+    font-family: 'Rubik', sans-serif;
 }
 
 hr {
@@ -63,6 +70,11 @@ a {
 
 a:hover {
     color: var(--color-6);
+}
+
+section p {
+    font-size: .9rem;
+    font-family: 'Open Sans', sans-serif;
 }
 
 /* Nav bar */
@@ -246,6 +258,16 @@ header {
     color: var(--font-4);
 }
 
+.style-1 {
+    font-family: 'Open Sans', sans-serif;
+}
+.style-2 {
+    font-family: 'Roboto Slab', serif;
+}
+.style-3 {
+    font-family: 'Rubik', sans-serif;
+}
+
 .fnt-wrk-des {
     font-size: 72px;
     font-weight: 400;
@@ -282,16 +304,17 @@ header {
 /* Gradient */
 
 .bg-gradient-black {
-    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 75%, rgba(46,46,46,1) 100%);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 75%, rgba(46, 46, 46, 1) 100%);
 }
+
 .bg-gradient-blue {
     background: linear-gradient(#157FFB, #2e2e2e);
 }
 
 .box-shadow-card {
-    -webkit-box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.75);
-    box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.75);
 }
 
 /* .icon-shape {
@@ -327,6 +350,7 @@ header {
 }
 
 .anime-grid {
+    font-family: 'Roboto Slab', serif;
     background-color: #F0F0F0;
     height: 100vh;
     transition: background-color 1s;
@@ -337,16 +361,16 @@ header {
     top: 20%;
     position: relative;
     text-align: center;
-    font-size: 100px;
+    font-size: 80px;
     font-weight: 400;
 }
 
 .last-name {
-    padding: 0px;
+    padding-top: 10px;
     top: 10%;
     position: relative;
     text-align: center;
-    font-size: 100px;
+    font-size: 80px;
     font-weight: 400;
 }
 
@@ -402,13 +426,15 @@ header {
 }
 
 .introduction-section {
-    padding-top: 10rem;
-    padding-bottom: 5rem;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+    text-align: center;
 }
 
 /* #icon-section {
     color: var(--color-2);
 } */
+
 /* #icon-section i {
     color: var(--color-2);
 }
@@ -441,6 +467,7 @@ header {
     width: 100%;
     margin-right: auto;
 }
+
 .container-right {
     opacity: 0;
     width: 100%;
@@ -461,6 +488,7 @@ button {
     color: var(--font-1);
     transition: .5s;
 }
+
 button:hover {
     border-color: var(--color-5);
     border-width: 1px;
@@ -473,8 +501,9 @@ button:hover {
     transition: .5s;
     /* border-radius: 3px; */
 }
-button:before {
-}
+
+button:before {}
+
 .fa-long-arrow-right {
     font-size: medium;
 }
@@ -497,6 +526,7 @@ button:before {
     left: -1200px;
     top: 1200px;
 }
+
 .icon-anime i {
     color: var(--color-5);
 }
@@ -504,10 +534,13 @@ button:before {
 #info-icons {
     opacity: 0;
 }
+
 #info-icons i {
     color: #7e7e7e;
     text-decoration: none;
+    padding-top: 25px;
 }
+
 #info-icons a {
     text-decoration: none;
 }
@@ -516,4 +549,3 @@ footer {
     padding: 50px 0 20px 0;
     color: #3f3f3f;
 }
-
