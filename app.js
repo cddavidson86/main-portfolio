@@ -124,7 +124,6 @@ $(window).on('scroll', function () {
             easing: 'linear',
             duration: 250
         })
-        console.log(gridScrollUp);
         // Ride Down
     } else if (Math.round($(window).scrollTop()) < 10 && gridScrollUp == true) {
         anime({
@@ -181,11 +180,12 @@ $(window).on('scroll', function () {
 
 // Card Ease In
 
-// Card Var
+// Card var for animations
 var easeDuration = 1000;
 var descFade = 1000;
 
 // Cater Card
+
 var caterCard = false;
 var caterScroll = 900;
 $(window).on('scroll', function () {
@@ -312,28 +312,28 @@ $(".hover-on").mouseover(function () {
         translateX: [
             { value: 250, duration: 1000, delay: 500 },
             { value: 0, duration: 1000, delay: 500 }
-          ],
-          translateY: [
+        ],
+        translateY: [
             { value: -40, duration: 500 },
             { value: 40, duration: 500, delay: 1000 },
             { value: 0, duration: 500, delay: 1000 }
-          ],
-          scaleX: [
+        ],
+        scaleX: [
             { value: 4, duration: 100, delay: 500, easing: 'easeOutExpo' },
             { value: 1, duration: 900 },
             { value: 4, duration: 100, delay: 500, easing: 'easeOutExpo' },
             { value: 1, duration: 900 }
-          ],
-          scaleY: [
+        ],
+        scaleY: [
             { value: [1.75, 1], duration: 500 },
             { value: 2, duration: 50, delay: 1000, easing: 'easeOutExpo' },
             { value: 1, duration: 450 },
             { value: 1.75, duration: 50, delay: 1000, easing: 'easeOutExpo' },
             { value: 1, duration: 450 }
-          ],
-          easing: 'easeOutElastic(1, .8)',
-          
-          loop: true
+        ],
+        easing: 'easeOutElastic(1, .8)',
+
+        loop: true
     });
 });
 // $(".hover-on").mouseout(function () {
@@ -378,30 +378,30 @@ $(window).on('scroll', function () {
 });
 
 // Icon color change 
-$(function() {
-    $('#icon-1').hover(function() {
-      $('#icon-1 i').css('color', '#F0F0F0');
-    }, function() {
-      // on mouseout, reset the background colour
-      $('#icon-1 i').css('color', '#7e7e7e');
+$(function () {
+    $('#icon-1').hover(function () {
+        $('#icon-1 i').css('color', '#F0F0F0');
+    }, function () {
+        // on mouseout, reset the background colour
+        $('#icon-1 i').css('color', '#7e7e7e');
     });
-  });
-  $(function() {
-    $('#icon-2').hover(function() {
-      $('#icon-2 i').css('color', '#F0F0F0');
-    }, function() {
-      // on mouseout, reset the background colour
-      $('#icon-2 i').css('color', '#7e7e7e');
+});
+$(function () {
+    $('#icon-2').hover(function () {
+        $('#icon-2 i').css('color', '#F0F0F0');
+    }, function () {
+        // on mouseout, reset the background colour
+        $('#icon-2 i').css('color', '#7e7e7e');
     });
-  });
-  $(function() {
-    $('#icon-3').hover(function() {
-      $('#icon-3 i').css('color', '#F0F0F0');
-    }, function() {
-      // on mouseout, reset the background colour
-      $('#icon-3 i').css('color', '#7e7e7e');
+});
+$(function () {
+    $('#icon-3').hover(function () {
+        $('#icon-3 i').css('color', '#F0F0F0');
+    }, function () {
+        // on mouseout, reset the background colour
+        $('#icon-3 i').css('color', '#7e7e7e');
     });
-  });
+});
 
 
 
