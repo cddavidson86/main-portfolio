@@ -325,7 +325,48 @@ header {
     transition: background-color 1s;
 }
 
+/* New  */
+
+.first-name-div {
+    display: flex;
+    justify-content: space-around;
+    top: 20%;
+    position: absolute;
+    width: 100%;
+}
+
+.last-name-div {
+    display: flex;
+    justify-content: space-around;
+    top: 30%;
+    position: absolute;
+    width: 100%;
+    margin-top: 3%;
+}
+
 .first-name {
+    font-family: 'Rubik', sans-serif;
+    flex: none;
+    /* padding: 10%; */
+    text-align: center;
+    font-size: 6vw;
+    font-weight: 400;
+    flex-basis: 5%;
+}
+
+.last-name {
+    font-family: 'Rubik', sans-serif;
+    flex: none;
+    padding: 0px;
+    text-align: center;
+    font-size: 6vw;
+    font-weight: 400;
+    flex-basis: 10%;
+}
+
+/* Old */
+
+/* .first-name {
     padding: 0px;
     top: 20%;
     position: relative;
@@ -341,7 +382,7 @@ header {
     text-align: center;
     font-size: 80px;
     font-weight: 400;
-}
+} */
 
 .anime-dev-box {
     opacity: 0;

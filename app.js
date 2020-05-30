@@ -6,29 +6,29 @@ $(function () {
 })
 
 // Scroll on click
-function scrollFunction() {
-    $("body").removeClass("stop-scrolling");
+// function scrollFunction() {
+//     $("body").removeClass("stop-scrolling");
 
-    anime({
-        targets: '.icon-see-below',
-        keyframes: [
-            { translateY: -100, duration: 400 },
-            { translateY: 1500, duration: 1000 },
-            { translateX: 1500, duration: 100 },
-            { translateY: 0, duration: 500 },
-            { translateX: 0, duration: 500 }
-        ],
-        rotate: 90,
-        easing: 'easeOutQuad'
-    });
-    setTimeout(function () {
-        window.scroll({
-            top: 1340,
-            left: 0,
-            behavior: 'smooth'
-        });
-    }, 1200);
-}
+//     anime({
+//         targets: '.icon-see-below',
+//         keyframes: [
+//             { translateY: -100, duration: 400 },
+//             { translateY: 1500, duration: 1000 },
+//             { translateX: 1500, duration: 100 },
+//             { translateY: 0, duration: 500 },
+//             { translateX: 0, duration: 500 }
+//         ],
+//         rotate: 90,
+//         easing: 'easeOutQuad'
+//     });
+//     setTimeout(function () {
+//         window.scroll({
+//             top: 1340,
+//             left: 0,
+//             behavior: 'smooth'
+//         });
+//     }, 1200);
+// }
 
 // Navbar Expand
 $(window).on('scroll', function () {
@@ -44,6 +44,12 @@ $(window).on('scroll', function () {
 let tl = anime.timeline({
     easing: 'easeOutExpo',
     duration: 750
+});
+
+var windowSize = $(window).width();
+$(window).resize(function() {
+  var windowSize = $(window).width();
+  console.log(windowSize);
 });
 
 tl.add({
@@ -65,15 +71,19 @@ tl.add({
         delay: anime.stagger(100, { start: 300 })
     })
     .add({
-        targets: '.first-name',
-        translateX: function (el, i, l) { return i * -115 },
+        targets: '.first-name-div',
+        // translateX: function (el, i, l) { return i * -115 },
+        width: '30%',
+        marginLeft: '2%',
         delay: anime.stagger(30),
         easing: 'easeOutSine',
         duration: 250
     })
     .add({
-        targets: '.last-name',
-        translateX: function (el, i, l) { return i * -115 },
+        targets: '.last-name-div',
+        // translateX: function (el, i, l) { return i * -115 },
+        width: '30%',
+        marginLeft: '2%',
         delay: anime.stagger(30),
         easing: 'easeOutSine',
         duration: 250
@@ -111,14 +121,14 @@ $(window).on('scroll', function () {
             duration: 1000
         })
         anime({
-            targets: '.first-name',
+            targets: '.first-name-div',
             translateX: '-1400',
             delay: anime.stagger(30),
             easing: 'linear',
             duration: 250
         })
         anime({
-            targets: '.last-name',
+            targets: '.last-name-div',
             translateX: '-1400',
             delay: anime.stagger(30),
             easing: 'linear',
@@ -144,7 +154,7 @@ $(window).on('scroll', function () {
             delay: '2000'
         })
         anime({
-            targets: '.first-name',
+            targets: '.first-name-div',
             translateX: function (el, i, l) { return i * -115 },
             delay: anime.stagger(30),
             easing: 'linear',
@@ -152,7 +162,7 @@ $(window).on('scroll', function () {
             duration: 500
         })
         anime({
-            targets: '.last-name',
+            targets: '.last-name-div',
             translateX: function (el, i, l) { return i * -120 },
             delay: anime.stagger(30),
             easing: 'linear',
