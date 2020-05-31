@@ -329,39 +329,43 @@ header {
 
 .first-name-div {
     display: flex;
+    /* margin-left: 3%; */
     justify-content: space-around;
     top: 20%;
     position: absolute;
-    width: 100%;
+    width: 99%;
 }
 
 .last-name-div {
     display: flex;
+    /* margin-left: 3%; */
     justify-content: space-around;
     top: 30%;
     position: absolute;
-    width: 100%;
+    width: 99%;
     margin-top: 3%;
 }
 
 .first-name {
     font-family: 'Rubik', sans-serif;
     flex: none;
-    /* padding: 10%; */
+    color: var(--color-1);
+    /* padding-right: 8.5%; */
     text-align: center;
-    font-size: 6vw;
+    font-size: 80px;
     font-weight: 400;
-    flex-basis: 5%;
+    transition: color .5s;
 }
 
 .last-name {
     font-family: 'Rubik', sans-serif;
     flex: none;
-    padding: 0px;
+    color: var(--color-5);
+    /* padding-right: 9%; */
     text-align: center;
-    font-size: 6vw;
+    font-size: 80px;
     font-weight: 400;
-    flex-basis: 10%;
+    transition: color .5s;
 }
 
 /* Old */
@@ -394,7 +398,7 @@ header {
     font-size: 1em;
     font-weight: 300;
     height: 300px;
-    width: 30rem;
+    width: 30%;
     border-right-width: thick;
     border-right-color: var(--color-5);
     border-right-style: solid;
@@ -402,13 +406,17 @@ header {
 
 .anime-dev-box span {
     bottom: 0%;
-    right: 20%;
+    left: 0%;
+    width: 100%;
+    /* margin-right: 10%; */
     position: absolute;
 }
 
 .anime-dev-box ul {
     top: 85%;
-    right: 55%;
+    left: -40%;
+    width: 100%;
+    /* margin-right: 10%; */
     position: absolute;
 }
 
@@ -449,7 +457,7 @@ header {
 
 .wrk-txt-fade {
     opacity: 0;
-    font-size: 1vw;
+    font-size: 1.2vw;
     /* new way, if supported */
     line-height: 140%;
 }
@@ -569,6 +577,17 @@ footer {
         font-size: 9px;
         margin: 1px;
     }
+    .first-name {
+        font-size: 120px;
+    }
+    .last-name {
+        font-size: 120px;
+    }
+    .anime-dev-box {
+        width: 70%;
+        height: 400px;
+        top: 20%;
+    }
 }
 
 @media (max-width: 991px) {
@@ -584,6 +603,17 @@ footer {
     .badge-primary {
         font-size: 10px;
         margin: .2%;
+    }
+    .first-name {
+        font-size: 100px;
+    }
+    .last-name {
+        font-size: 100px;
+    }
+    .anime-dev-box {
+        width: 75%;
+        height: 400px;
+        top: 20%;
     }
 }
 
@@ -622,6 +652,17 @@ footer {
     #info-icons {
         padding-top: 20px;
     }
+    .first-name {
+        font-size: 60px;
+    }
+    .last-name {
+        font-size: 60px;
+    }
+    /* .anime-dev-box { 
+        width: 80%;
+        height: 400px;
+        top: 20%;
+    } */
 }
 
 @media (max-width: 500px) {
@@ -646,6 +687,38 @@ footer {
     #info-icons .h3 {
         font-size: x-large;
     }
+    .first-name {
+        font-size: 60px;
+    }
+    .last-name {
+        font-size: 60px;
+    }
+    .anime-dev-box {
+        width: 85%;
+        height: 250px;
+        top: 20%;
+    }
+    .anime-dev-box span {
+        padding-left: 20%;
+    }
+    .container-left {
+        opacity: 0;
+        min-width: 95%;
+        padding: 0;
+        position: relative;
+        right: 10%;
+    }
+    .container-right {
+        opacity: 0;
+        min-width: 95%;
+        padding: 0;
+        position: relative;
+        left: 10%;
+    }
+    .wrk-txt-fade p {
+        font-size: 12px;
+        font-weight: 600;
+    }
 }
 
 @media (max-width: 350px) {
@@ -666,5 +739,19 @@ footer {
     }
     #info-icons .h3 {
         font-size: medium;
+    }
+    .first-name {
+        font-size: 45px;
+    }
+    .last-name {
+        font-size: 45px;
+    }
+    .anime-dev-box {
+        width: 85%;
+        height: 200px;
+        top: 20%;
+    }
+    .anime-dev-box span {
+        padding-left: 35%;
     }
 }

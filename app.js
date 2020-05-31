@@ -47,53 +47,75 @@ let tl = anime.timeline({
 });
 
 var windowSize = $(window).width();
-$(window).resize(function() {
-  var windowSize = $(window).width();
-  console.log(windowSize);
+$(window).resize(function () {
+    var windowSize = $(window).width();
+    console.log(windowSize);
 });
 
-tl.add({
-    targets: '.anime-grid',
-    width: '80%',
-    backgroundColor: '#191919',
-    delay: anime.stagger(100, { start: 0 }) // increase delay by 100ms for each elements.
-})
-    .add({
+// Function for grid to make responsive
+function timeLineGrid(percentWidth, paddingW) {
+    tl.add({
         targets: '.anime-grid',
-        width: '90%',
-        backgroundColor: '#157FFB',
-        delay: anime.stagger(100, { from: 'center' })
-    })
-    .add({
-        targets: '.anime-grid',
+        width: '80%',
         backgroundColor: '#191919',
-        width: '100%',
-        delay: anime.stagger(100, { start: 300 })
+        delay: anime.stagger(100, { start: 0 }) // increase delay by 100ms for each elements.
     })
-    .add({
-        targets: '.first-name-div',
-        // translateX: function (el, i, l) { return i * -115 },
-        width: '30%',
-        marginLeft: '2%',
-        delay: anime.stagger(30),
-        easing: 'easeOutSine',
-        duration: 250
-    })
-    .add({
-        targets: '.last-name-div',
-        // translateX: function (el, i, l) { return i * -115 },
-        width: '30%',
-        marginLeft: '2%',
-        delay: anime.stagger(30),
-        easing: 'easeOutSine',
-        duration: 250
-    })
-    .add({
-        targets: '.anime-dev-box',
-        opacity: 1,
-        easing: 'easeOutSine',
-        duration: 3000
-    })
+        .add({
+            targets: '.anime-grid',
+            width: '90%',
+            backgroundColor: '#157FFB',
+            delay: anime.stagger(100, { from: 'center' })
+        })
+        .add({
+            targets: '.anime-grid',
+            backgroundColor: '#191919',
+            width: '103%',
+            delay: anime.stagger(100, { start: 300 })
+        })
+        .add({
+            targets: ['.first-name', '.last-name'],
+            color: '#F0F0F0',
+            delay: anime.stagger(30),
+            duration: 500
+        })
+        .add({
+            targets: ['.first-name-div', '.last-name-div'],
+            marginLeft: paddingW + '%',
+            width: percentWidth + '%',
+            flex: 'none',
+            delay: anime.stagger(30),
+            easing: 'easeOutSine',
+            duration: 250
+        })
+        .add({
+            targets: ['.first-name', '.last-name'],
+            delay: anime.stagger(30),
+            easing: 'easeOutSine',
+            duration: 250
+        })
+        .add({
+            targets: '.anime-dev-box',
+            opacity: 1,
+            easing: 'easeOutSine',
+            duration: 3000
+        })
+}
+
+
+if (windowSize < 321) {
+    timeLineGrid(80, 5);
+} else if (windowSize >= 321 && windowSize < 400) {
+    timeLineGrid(70, 12);
+} else if (windowSize >= 400 && windowSize < 700) {
+    timeLineGrid(70, 8);
+} else if (windowSize >= 700 && windowSize < 900) {
+    timeLineGrid(70, 8);
+} else if (windowSize >= 900 && windowSize < 1100) {
+    timeLineGrid(65, 6);
+} else if (windowSize >= 1100) {
+    timeLineGrid(35, 3);
+}
+
 
 
 
