@@ -479,7 +479,7 @@ header {
 }
 
 .badge-primary {
-    font-size: 11px;
+    font-size: 12px;
 }
 
 button {
@@ -588,6 +588,10 @@ footer {
         height: 400px;
         top: 20%;
     }
+    .wrk-txt-fade p {
+        font-size: 12px;
+        line-height: 1.2;
+    }
 }
 
 @media (max-width: 991px) {
@@ -596,13 +600,11 @@ footer {
     }
     .wrk-txt-fade {
         min-height: 250px;
-        font-size: 1vw;
-        /* new way, if supported */
         line-height: 200%;
     }
     .badge-primary {
-        font-size: 10px;
-        margin: .2%;
+        font-size: 11px;
+        margin: 0px;
     }
     .first-name {
         font-size: 100px;
@@ -677,7 +679,6 @@ footer {
     }
     .wrk-txt-fade p {
         font-size: 10px;
-        /* new way, if supported */
         line-height: 1.2;
     }
     .badge-primary {
@@ -688,10 +689,10 @@ footer {
         font-size: x-large;
     }
     .first-name {
-        font-size: 60px;
+        font-size: 55px;
     }
     .last-name {
-        font-size: 60px;
+        font-size: 55px;
     }
     .anime-dev-box {
         width: 85%;
