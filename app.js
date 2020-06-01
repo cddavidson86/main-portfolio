@@ -5,34 +5,9 @@ $(function () {
     })
 })
 
-// Scroll on click
-// function scrollFunction() {
-//     $("body").removeClass("stop-scrolling");
-
-//     anime({
-//         targets: '.icon-see-below',
-//         keyframes: [
-//             { translateY: -100, duration: 400 },
-//             { translateY: 1500, duration: 1000 },
-//             { translateX: 1500, duration: 100 },
-//             { translateY: 0, duration: 500 },
-//             { translateX: 0, duration: 500 }
-//         ],
-//         rotate: 90,
-//         easing: 'easeOutQuad'
-//     });
-//     setTimeout(function () {
-//         window.scroll({
-//             top: 1340,
-//             left: 0,
-//             behavior: 'smooth'
-//         });
-//     }, 1200);
-// }
-
 // Navbar Expand
 $(window).on('scroll', function () {
-    if (Math.round($(window).scrollTop()) > 630) {
+    if (Math.round($(window).scrollTop()) > 1230) {
         $('.navbar-main').addClass('scrolled');
     } else {
         $('.navbar-main').removeClass('scrolled');
@@ -101,6 +76,7 @@ function timeLineGrid(percentWidth, paddingW) {
         })
 }
 
+// Responzive Grid animation functions using window size
 
 if (windowSize < 321) {
     timeLineGrid(80, 5);
@@ -109,14 +85,12 @@ if (windowSize < 321) {
 } else if (windowSize >= 400 && windowSize < 700) {
     timeLineGrid(70, 8);
 } else if (windowSize >= 700 && windowSize < 900) {
-    timeLineGrid(70, 8);
+    timeLineGrid(60, 8);
 } else if (windowSize >= 900 && windowSize < 1100) {
     timeLineGrid(65, 6);
 } else if (windowSize >= 1100) {
     timeLineGrid(35, 3);
 }
-
-
 
 
 // Grid scroll anime
@@ -194,21 +168,6 @@ $(window).on('scroll', function () {
     }
 });
 
-
-// Name animaton
-// $(document).ready(function () {
-
-//     anime({
-//         targets: '.title-anime',
-//         keyframes: [
-//             { translateY: 1600, duration: 600 },
-//             { translateY: 1500, duration: 1500 },
-//         ],
-//         rotate: [360, 0],
-//         easing: 'easeOutQuad',
-//         delay: function (el, i, l) { return i * 300 }
-//     });
-// });
 
 // Card Ease In
 
