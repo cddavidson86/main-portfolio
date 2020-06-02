@@ -22,7 +22,7 @@ html {
 html, body {
     box-sizing: border-box;
     overflow-x: hidden;
-    max-width: 100%;
+    width: 100%;
 }
 
 body {
@@ -64,7 +64,7 @@ a:hover {
 }
 
 section p {
-    font-size: .9rem;
+    font-size: 1rem;
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -82,15 +82,15 @@ header {
         padding-top: 0;
     }
     header {
-        position: sticky;
+        /* position: sticky; */
     }
 }
 
 .navbar-main {
     position: absolute;
-    /* height: 10px; */
+    height: 12px;
     width: 100%;
-    transition: 2s ease;
+    transition: 1s ease;
 }
 
 .navbar-main .nav {
@@ -104,20 +104,19 @@ header {
 .navbar-main .nav .item {
     list-style: none;
     display: inline-block;
-    font-size: 18px;
-    padding: 10px;
-    line-height: 100px;
-    margin-right: 15px;
+    font-size: 14px;
+    padding: 0 15px 0 15px;
+    line-height: 80px;
     /* transition: 2s ease; */
     opacity: 0;
 }
 
 .navbar-main .nav .item a {
     text-decoration: none;
-    color: var(--color-6);
+    color: var(--color-3);
 }
 
-/* .navbar-main .logo {
+.navbar-main .logo {
     float: left;
     display: inline-block;
     margin-top: 20px;
@@ -131,33 +130,37 @@ header {
   }
   .navbar-main .logo img {
     display: none;
-  } */
+  }
 
 .scrolled {
     transition: 1s ease;
 }
 
 .scrolled.navbar-main {
-    height: 90px;
-    background-color: var(--color-6);
+    height: 60px;
+    background-color: var(--color-3);
     transition: 1s ease;
     box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.4);
 }
 
 .scrolled.navbar-main .nav .item {
-    line-height: 100px;
+    line-height: 80px;
     transition: 3s ease;
     opacity: 1;
 }
 
 .scrolled.navbar-main .nav .item a {
-    line-height: 100px;
-    transition: 3s ease;
+    line-height: 80px;
+    transition: .5s ease;
     text-decoration: none;
-    color: var(--color-4);
+    color: var(--color-1);
+}
+.scrolled.navbar-main .nav .item a:hover {
+    transition: .5s ease;
+    color: var(--color-5);
 }
 
-/* .scrolled.navbar-main .logo {
+.scrolled.navbar-main .logo {
     float: left;
     display: inline-block;
     margin-top: 20px;
@@ -166,7 +169,7 @@ header {
     height: 50px;
     transition: 0.5s ease;
     background-color: firebrick;
-  } */
+  }
 
 /* Background Color */
 
@@ -594,7 +597,7 @@ footer {
     }
     .anime-dev-box {
         width: 75%;
-        height: 400px;
+        height: 300px;
         top: 20%;
     }
 }
@@ -883,7 +886,7 @@ footer {
 
 @media only screen and (min-device-width: 375px) and (max-device-height: 812px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
     .anime-dev-box {
-        width: 65%;
+        width: 75%;
         height: 200px;
         top: 20%;
     }

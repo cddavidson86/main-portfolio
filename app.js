@@ -7,7 +7,7 @@ $(function () {
 
 // Navbar Expand
 $(window).on('scroll', function () {
-    if (Math.round($(window).scrollTop()) > 1230) {
+    if (Math.round($(window).scrollTop()) > 1180) {
         $('.navbar-main').addClass('scrolled');
     } else {
         $('.navbar-main').removeClass('scrolled');
