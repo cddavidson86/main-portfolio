@@ -24,8 +24,10 @@ let tl = anime.timeline({
 
 var windowSize = $(window).width();
 $(window).resize(function () {
-    var windowSize = $(window).width();
+    windowSize = $(window).width();
+    workCard = $("#work-cards").position().top;
     console.log(windowSize);
+    console.log(workCard);
 });
 
 // Function for grid to make responsive

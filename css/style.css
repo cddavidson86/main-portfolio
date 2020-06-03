@@ -166,6 +166,7 @@ header {
 .scrolled.navbar-main .logo {
     float: left;
     display: inline-block;
+    margin-top: 1px;
     margin-left: 2%;
     width: auto;
     height: 95%;
