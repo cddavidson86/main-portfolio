@@ -21,6 +21,8 @@ let tl = anime.timeline({
     duration: 750
 });
 
+
+// Screen width checker
 var windowSize = $(window).width();
 $(window).resize(function () {
     windowSize = $(window).width();
@@ -29,7 +31,7 @@ $(window).resize(function () {
     console.log(workCard);
 });
 
-// Function for grid to make responsive
+// Function to make name animations responsive
 function timeLineGrid(percentWidth, paddingW) {
     tl.add({
         targets: '.anime-grid',
@@ -78,7 +80,7 @@ function timeLineGrid(percentWidth, paddingW) {
         })
 }
 
-// Responzive Grid animation functions using window size
+// Responsive grid animation - functions are using window size
 
 if (windowSize < 321) {
     timeLineGrid(80, 5);
@@ -95,9 +97,28 @@ if (windowSize < 321) {
 }
 
 
-// Grid scroll anime
+// Global Scroll Vars
+
 var gridScrollUp = false;
+
+// Global Card vars for animations
+
+var easeDuration = 1000;
+var descFade = 1000;
+var caterCard = false;
+var caterScroll = 900;
+var cineCard = false;
+var cineScroll = 1400;
+var bookCard = false;
+var bookScroll = 1900;
+
+
+// Scroll functions
+
 $(window).on('scroll', function () {
+
+    // Grid scroll animation
+
     // Ride Up
     if (Math.round($(window).scrollTop()) >= 250 && gridScrollUp == false) {
         anime({
@@ -168,20 +189,11 @@ $(window).on('scroll', function () {
             duration: 500
         })
     }
-});
 
+    // Cards Ease In
 
-// Card Ease In
+    // Cater Card
 
-// Card var for animations
-var easeDuration = 1000;
-var descFade = 1000;
-
-// Cater Card
-
-var caterCard = false;
-var caterScroll = 900;
-$(window).on('scroll', function () {
     if (Math.round($(window).scrollTop()) >= caterScroll && caterCard == false) {
         anime({
             targets: '#cater2me-card',
@@ -216,12 +228,9 @@ $(window).on('scroll', function () {
         });
         caterCard = false;
     }
-});
 
-// Cine Card
-var cineCard = false;
-var cineScroll = 1400;
-$(window).on('scroll', function () {
+    // Cine Card
+
     if (Math.round($(window).scrollTop()) >= cineScroll && cineCard == false) {
         anime({
             targets: '#cine-card',
@@ -256,12 +265,9 @@ $(window).on('scroll', function () {
         });
         cineCard = false;
     }
-});
 
-// Book Card
-var bookCard = false;
-var bookScroll = 1900;
-$(window).on('scroll', function () {
+    // Book Card
+
     if (Math.round($(window).scrollTop()) >= bookScroll && bookCard == false) {
         anime({
             targets: '#book-card',
@@ -297,50 +303,6 @@ $(window).on('scroll', function () {
     }
 });
 
-// Card Hover Animation
-
-$(".hover-on").mouseover(function () {
-    anime({
-        targets: '#anime-blocks > div',
-        translateX: [
-            { value: 250, duration: 1000, delay: 500 },
-            { value: 0, duration: 1000, delay: 500 }
-        ],
-        translateY: [
-            { value: -40, duration: 500 },
-            { value: 40, duration: 500, delay: 1000 },
-            { value: 0, duration: 500, delay: 1000 }
-        ],
-        scaleX: [
-            { value: 4, duration: 100, delay: 500, easing: 'easeOutExpo' },
-            { value: 1, duration: 900 },
-            { value: 4, duration: 100, delay: 500, easing: 'easeOutExpo' },
-            { value: 1, duration: 900 }
-        ],
-        scaleY: [
-            { value: [1.75, 1], duration: 500 },
-            { value: 2, duration: 50, delay: 1000, easing: 'easeOutExpo' },
-            { value: 1, duration: 450 },
-            { value: 1.75, duration: 50, delay: 1000, easing: 'easeOutExpo' },
-            { value: 1, duration: 450 }
-        ],
-        easing: 'easeOutElastic(1, .8)',
-
-        loop: true
-    });
-});
-// $(".hover-on").mouseout(function () {
-//     anime({
-//         targets: '#anime-blocks > div',
-//         // height: '80%',
-//         translateX: '0',
-//         translateY: '0',
-//         rotateZ: '0deg',
-//         easing: 'easeInOutQuad',
-//         duration: '500',
-//     });
-// });
-
 // Icon Animation 
 var iconTrigger = false;
 $(window).on('scroll', function () {
@@ -356,7 +318,7 @@ $(window).on('scroll', function () {
     }
 });
 
-// Icon Animation 
+// footer Animation 
 var footerFade = false;
 $(window).on('scroll', function () {
     if (Math.round($(window).scrollTop()) > 2900 && footerFade == false) {
@@ -378,16 +340,12 @@ $(function () {
         // on mouseout, reset the background colour
         $('#icon-1 i').css('color', '#7e7e7e');
     });
-});
-$(function () {
     $('#icon-2').hover(function () {
         $('#icon-2 i').css('color', '#F0F0F0');
     }, function () {
         // on mouseout, reset the background colour
         $('#icon-2 i').css('color', '#7e7e7e');
     });
-});
-$(function () {
     $('#icon-3').hover(function () {
         $('#icon-3 i').css('color', '#F0F0F0');
     }, function () {
@@ -396,168 +354,11 @@ $(function () {
     });
 });
 
+// Resume Popup
 
-
-
-
-// Intro Animation
-// let tl = anime.timeline({
-//     easing: 'easeInOutQuad',
-// })
-// tl.add({
-//     targets: '.anime-intro-div',
-//     scale: [
-//         { value: .1, easing: 'easeOutSine', duration: 300 },
-//         { value: 1, easing: 'easeInOutQuad', duration: 900 }
-//     ],
-//     delay: anime.stagger(100, { grid: [14, 5], from: 'center' })
-// })
-//     .add({
-//         backgroundColor: 'rgb(197, 197, 255)',
-//         scale: .2,
-//         borderRadius: 50,
-//         targets: '.anime-intro-div',
-//         translateX: [{ value: -200, duration: 300 }],
-//         rotateZ: [0, 360],
-//         delay: anime.stagger(20),
-//         easing: 'easeInOutSine'
-//     })
-//     .add({
-//         targets: '.anime-intro-div',
-//         translateY: [{ value: -3500, duration: 300 }],
-//         delay: anime.stagger(20),
-//         easing: 'easeInOutSine'
-//     })
-//     .add({
-//         targets: '.title-anime',
-//         keyframes: [
-//             { translateY: 1500, duration: 1000 },
-//             { translateY: 1600, duration: 500 },
-//         ],
-//         rotate: [360, 0],
-//         easing: 'easeOutElastic(3, 3)',
-//         delay: function (el, i, l) { return i * 1000 }
-//     })
-
-
-// $(window).on('scroll', function () {
-//     console.log($(this).scrollTop());
-// });
-
-
-
-// Anime Var
-
-// let tl = anime.timeline({
-//     easing: 'easeInOutQuad',
-//     // duration: 400,
-// })
-// tl.add({
-//     targets: '.anime-intro-div',
-//     width: '80%',
-//     backgroundColor: 'rgb(197, 197, 255)',
-//     delay: anime.stagger(50), // increase delay by 100ms for each elements.
-//     duration: 300
-// })
-//     .add({
-//         targets: '.anime-intro-div',
-//         width: '80%',
-//         backgroundColor: 'rgb(235, 235, 255)',
-//         duration: 300
-//     })
-//     .add({
-//         targets: '.anime-intro-div',
-//         rotateZ: [0, 360],
-//         delay: anime.stagger(100),
-//         easing: 'easeInOutQuad',
-//         duration: 300
-//     })
-//     .add({
-//         targets: '.anime-intro-div',
-//         borderRadius: 100,
-//         scaleY: .25,
-//         delay: anime.stagger(100),
-//         easing: 'easeInOutQuad',
-//         duration: 250
-//     })
-//     .add({
-//         targets: '.anime-intro-div',
-//         translateY: [{ value: -900, duration: 150 },
-//         { value: 900, duration: 150 }, { value: 0, duration: 150 }],
-//         delay: anime.stagger(100),
-//         easing: 'easeInOutSine'
-//     })
-//     .add({
-//         targets: '.anime-intro-div',
-//         translateY: [{ value: -2000, duration: 50 }],
-//         rotateZ: [0, 360],
-//         delay: anime.stagger(100),
-//         easing: 'easeInOutSine'
-//     })
-
-// tl = anime.timeline({
-//     easing: 'easeOutExpo',
-//     duration: 750,
-//     direction: 'alternate', // Is not inherited
-//     loop: true // Is not inherited
-// })
-// .add({
-//     targets: '.anime-intro-div',
-//     translateY: -600,
-//     direction: 'alternate',
-//     loop: true,
-//     delay: anime.stagger(200),
-//     easing: 'easeInOutSine'
-// })
-
-
-// // Icon Animation
-// $(document).ready(function () {
-//     var triggered = false;
-//     $(window).on('scroll', function () {
-//         if (Math.round($(window).scrollTop()) > 4100 && triggered == false) {
-//             $('body').addClass('stop-scrolling');
-
-//             anime({
-//                 targets: '.icon-anime',
-//                 translateY: [
-//                     { value: 250, duration: 1500, duration: 100 },
-//                     { value: 0, duration: 1800 }
-//                 ],
-//                 translateX: {
-//                     value: '*=2.5', // 100px * 2.5 = '250px'
-//                     duration: 1000
-//                 },
-//                 delay: function (el, i, l) { return i * 100 }
-//             });
-
-//             triggered = true;
-
-//         }
-//         else {
-//             setTimeout(function () { $('body').removeClass('stop-scrolling'); }, 3500);
-//         }
-
-//     });
-// });
-
-
-
-// .add({
-//     targets: 'h1',
-//     top: '20%',
-//     opacity: 1,
-//     duration: 4000,
-// }, '-=1600')
-
-// $(window).on('scroll', function () {
-//     if (Math.round($(window).scrollTop()) > 300) {
-//         anime({
-//             targets: '.anime-grid',
-//             width: '100%',
-//             backgroundColor: '#F0F0F0;',
-//             delay: anime.stagger(100)
-//         });
-//     }
-// });
+$(function () {
+    $('#icon-3').click(function () {
+        $('#resume-mb').toggleClass('invis');
+    });
+});
 

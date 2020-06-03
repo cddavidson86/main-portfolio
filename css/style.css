@@ -336,10 +336,6 @@ header {
     text-align: center;
 }
 
-#about-me p {
-    color: var(--color-1);
-}
-
 .anime-grid {
     font-family: 'Roboto Slab', serif;
     background-color: #F0F0F0;
@@ -437,7 +433,7 @@ header {
     padding-top: 80px;
 }
 
-/* My work section */
+/* Work card section styles */
 
 .work-container {
     position: relative;
@@ -454,7 +450,6 @@ header {
 .wrk-txt-fade {
     opacity: 0;
     font-size: 1.2vw;
-    /* new way, if supported */
     line-height: 140%;
 }
 
@@ -561,6 +556,19 @@ footer {
 .mg-responsive {
     margin: 25px;
     width: auto;
+}
+
+.invis {
+    display: none;
+    transform: 6s;
+}
+
+#icon-3 {
+    cursor: pointer;
+}
+
+#resume-mb {
+    width: 60%;
 }
 
 /* Media Query Start */
