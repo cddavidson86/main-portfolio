@@ -167,10 +167,10 @@ header {
     float: left;
     display: inline-block;
     margin-top: 1px;
-    margin-left: 2%;
+    margin-left: 5%;
     width: auto;
     height: 95%;
-    transition: 4s ease;
+    /* transition: 4s ease; */
 }
 
 /* Background Color */

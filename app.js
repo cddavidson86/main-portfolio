@@ -15,7 +15,6 @@ $(window).on('scroll', function () {
     }
 });
 
-
 // Anime Timeline for grid
 let tl = anime.timeline({
     easing: 'easeOutExpo',
