@@ -6,8 +6,9 @@ $(function () {
 })
 
 // Navbar Expand
+let workCard = $("#work-cards").position().top;
 $(window).on('scroll', function () {
-    if (Math.round($(window).scrollTop()) > 1180) {
+    if (Math.round($(window).scrollTop()) > workCard) {
         $('.navbar-main').addClass('scrolled');
     } else {
         $('.navbar-main').removeClass('scrolled');

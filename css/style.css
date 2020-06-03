@@ -166,13 +166,10 @@ header {
 .scrolled.navbar-main .logo {
     float: left;
     display: inline-block;
-    font-weight: 00;
-    margin-top: 15px;
     margin-left: 2%;
     width: auto;
-    height: 16px;
+    height: 95%;
     transition: 4s ease;
-    color: var(--color-2);
 }
 
 /* Background Color */
