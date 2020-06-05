@@ -9,9 +9,9 @@ element {}
     --color-5: #157FFB;
     --color-6: #ffffff;
     /* Font Colors */
-    --font-1: #F0F0F0;
+    --font-1: #157FFB;
     --font-2: #191919;
-    --font-3: #157FFB;
+    --font-3: #000000;
     --font-4: #3f3f3f;
 }
 
@@ -74,7 +74,8 @@ section p {
 
 .tooltip-inner {
     background-color: #191919;
-    color: var(--color-5)
+    color: var(--color-3);
+    font-family: 'Rubik', sans-serif;
 }
 .tooltip.bs-tooltip-right .arrow:before {
     border-right-color: #191919 !important;
@@ -348,12 +349,13 @@ header {
 }
 
 #about-me {
-    /* background-image: url(/css/images/top.jpg);
-    background-repeat: no-repeat;
-    background-size: 100%; */
     padding-top: 8rem;
     padding-bottom: 8rem;
     text-align: center;
+}
+
+#about-me a:hover {
+    color: var(--color-2);
 }
 
 .anime-grid {
