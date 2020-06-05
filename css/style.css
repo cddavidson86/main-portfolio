@@ -11,7 +11,7 @@ element {}
     /* Font Colors */
     --font-1: #157FFB;
     --font-2: #191919;
-    --font-3: #000000;
+    --font-3: #F0F0F0;
     --font-4: #3f3f3f;
 }
 
@@ -426,7 +426,7 @@ header {
 
 .anime-dev-box span {
     bottom: 0%;
-    left: 0%;
+    left: 10%;
     width: 100%;
     /* margin-right: 10%; */
     position: absolute;
