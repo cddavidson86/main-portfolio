@@ -11,7 +11,7 @@ element {}
     /* Font Colors */
     --font-1: #F0F0F0;
     --font-2: #191919;
-    --font-3: #000000;
+    --font-3: #157FFB;
     --font-4: #3f3f3f;
 }
 
@@ -70,6 +70,25 @@ section p {
 
 /* Nav bar */
 
+/* tooltip */
+
+.tooltip-inner {
+    background-color: #191919;
+    color: var(--color-5)
+}
+.tooltip.bs-tooltip-right .arrow:before {
+    border-right-color: #191919 !important;
+}
+.tooltip.bs-tooltip-left .arrow:before {
+    border-left-color: #191919 !important;
+}
+.tooltip.bs-tooltip-bottom .arrow:before {
+    border-bottom-color: #191919 !important;
+}
+.tooltip.bs-tooltip-top .arrow:before {
+    border-top-color: #191919 !important;
+}
+
 header {
     position: fixed;
     top: 0;
@@ -91,6 +110,7 @@ header {
     height: 12px;
     width: 100%;
     transition: 1s ease;
+    visibility: hidden;
 }
 
 .navbar-main .nav {
@@ -135,7 +155,7 @@ header {
 }
 
 .scrolled {
-    transition: 1s ease;
+    visibility: visible;
 }
 
 .scrolled.navbar-main {
@@ -166,10 +186,10 @@ header {
 .scrolled.navbar-main .logo {
     float: left;
     display: inline-block;
-    margin-top: 1px;
+    margin-top: 3px;
     margin-left: 5%;
     width: auto;
-    height: 95%;
+    height: 90%;
     /* transition: 4s ease; */
 }
 
