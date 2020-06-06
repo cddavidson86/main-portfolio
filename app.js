@@ -82,19 +82,21 @@ function timeLineGrid(percentWidth, paddingW) {
 
 // Responsive grid animation - functions are using window size
 
-if (windowSize < 321) {
-    timeLineGrid(80, 5);
-} else if (windowSize >= 321 && windowSize < 400) {
-    timeLineGrid(70, 12);
-} else if (windowSize >= 400 && windowSize < 700) {
-    timeLineGrid(70, 8);
-} else if (windowSize >= 700 && windowSize < 900) {
-    timeLineGrid(60, 8);
-} else if (windowSize >= 900 && windowSize < 1100) {
-    timeLineGrid(65, 6);
-} else if (windowSize >= 1100) {
-    timeLineGrid(35, 3);
-}
+window.onload = function () {
+    if (windowSize < 321) {
+        timeLineGrid(80, 5);
+    } else if (windowSize >= 321 && windowSize < 400) {
+        timeLineGrid(70, 12);
+    } else if (windowSize >= 400 && windowSize < 700) {
+        timeLineGrid(70, 8);
+    } else if (windowSize >= 700 && windowSize < 900) {
+        timeLineGrid(60, 8);
+    } else if (windowSize >= 900 && windowSize < 1100) {
+        timeLineGrid(65, 6);
+    } else if (windowSize >= 1100) {
+        timeLineGrid(35, 3);
+    }
+};
 
 
 // Global Scroll Vars
