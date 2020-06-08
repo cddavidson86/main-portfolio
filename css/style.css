@@ -368,6 +368,7 @@ header {
 /* New  */
 
 .first-name-div {
+    opacity: 0;
     display: flex;
     /* margin-left: 3%; */
     justify-content: space-around;
@@ -377,6 +378,7 @@ header {
 }
 
 .last-name-div {
+    opacity: 0;
     display: flex;
     /* margin-left: 3%; */
     justify-content: space-around;
