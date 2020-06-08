@@ -15,6 +15,22 @@ $(window).on('scroll', function () {
     }
 });
 
+// Global Card vars for animations
+
+var gridScrollUp = false;
+var easeDuration = 1000;
+var descFade = 1000;
+var caterCard = false;
+var subtScroll = -400;
+var subtIcon = -650;
+var caterScroll = $('#cater2me-card').position().top + subtScroll;
+var cineCard = false;
+var cineScroll = $('#cine-card').position().top + subtScroll;
+var bookCard = false;
+var bookScroll = $('#book-card').position().top + subtScroll;
+var iconTrigger = false;
+var iconAnime = $('#icon-section').position().top + subtIcon;
+
 // Anime Timeline for grid
 let tl = anime.timeline({
     easing: 'easeOutExpo',
@@ -29,7 +45,7 @@ $(window).resize(function () {
     caterScroll = $('#cater2me-card').position().top + subtScroll;
     cineScroll = $('#cine-card').position().top + subtScroll;
     bookScroll = $('#book-card').position().top + subtScroll;
-    iconAnime = $('#icon-section').position().top - 500;
+    iconAnime = $('#icon-section').position().top + subtIcon;
     console.log(windowSize);
     console.log(workCard);
 });
@@ -41,7 +57,7 @@ function timeLineGrid(percentWidth, paddingW) {
             targets: ['.first-name-div', '.last-name-div'],
             opacity: 1,
             easing: 'linear',
-            duration: 1000
+            duration: 500
         })
         .add({
             targets: '.anime-grid',
@@ -108,23 +124,6 @@ function timeLineGrid(percentWidth, paddingW) {
     }
 // };
 
-// Global Scroll Vars
-
-var gridScrollUp = false;
-
-// Global Card vars for animations
-
-var easeDuration = 1000;
-var descFade = 1000;
-var caterCard = false;
-var subtScroll = -200;
-var caterScroll = $('#cater2me-card').position().top + subtScroll;
-var cineCard = false;
-var cineScroll = $('#cine-card').position().top + subtScroll;
-var bookCard = false;
-var bookScroll = $('#book-card').position().top + subtScroll;
-var iconTrigger = false;
-var iconAnime = $('#icon-section').position().top - 500;
 
 // Scroll functions
 
