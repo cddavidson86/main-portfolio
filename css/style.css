@@ -1,71 +1,77 @@
-element {}
+element {
+}
 
 :root {
-    /* Primary Background */
-    --color-1: #191919;
-    --color-2: #2e2e2e;
-    --color-3: #F0F0F0;
-    --color-4: #000000;
-    --color-5: #157FFB;
-    --color-6: #ffffff;
-    /* Font Colors */
-    --font-1: #157FFB;
-    --font-2: #191919;
-    --font-3: #F0F0F0;
-    --font-4: #3f3f3f;
+	/* Primary Background */
+	--color-1: #191919;
+	--color-2: #2e2e2e;
+	--color-3: #f0f0f0;
+	--color-4: #000000;
+	--color-5: #157ffb;
+	--color-6: #ffffff;
+	/* Font Colors */
+	--font-1: #157ffb;
+	--font-2: #191919;
+	--font-3: #f0f0f0;
+	--font-4: #3f3f3f;
 }
 
 html {
-    scroll-behavior: smooth;
+	scroll-behavior: smooth;
 }
 
-html, body {
-    box-sizing: border-box;
-    overflow-x: hidden;
-    width: 100%;
+html,
+body {
+	box-sizing: border-box;
+	overflow-x: hidden;
+	width: 100%;
 }
 
 body {
-    margin: 0 auto;
-    font-family: 'Open Sans', sans-serif;
-    /* font-family: 'Roboto Slab', serif;
+	margin: 0 auto;
+	font-family: 'Open Sans', sans-serif;
+	/* font-family: 'Roboto Slab', serif;
     font-family: 'Rubik', sans-serif; */
-    font-size: 1em;
-    font-weight: 100;
-    color: var(--font-1);
-    background-color: var(--color-6);
+	font-size: 1em;
+	font-weight: 100;
+	color: var(--font-1);
+	background-color: var(--color-6);
 }
 
 div {
-    display: block;
+	display: block;
 }
 
-h1, h2, h3, h4, h5 {
-    font-family: 'Rubik', sans-serif;
-    color: var(--font-1);
+h1,
+h2,
+h3,
+h4,
+h5 {
+	font-family: 'Rubik', sans-serif;
+	color: var(--font-1);
 }
 
 .badge {
-    font-family: 'Rubik', sans-serif;
+	font-family: 'Rubik', sans-serif;
 }
 
 hr {
-    background-color: var(--color-2);
-    width: 90%;
-    border-width: 1px;
+	background-color: var(--color-2);
+	width: 90%;
+	border-width: 1px;
 }
 
 a {
-    color: var(--color-6);
+	color: var(--color-6);
 }
 
 a:hover {
-    color: var(--color-6);
+	color: var(--color-6);
 }
 
 section p {
-    font-size: 1rem;
-    font-family: 'Open Sans', sans-serif;
+	font-size: 1rem;
+	font-family: 'Open Sans', sans-serif;
 }
 
 /* Nav bar */
@@ -73,73 +79,73 @@ section p {
 /* tooltip */
 
 .tooltip-inner {
-    background-color: #191919;
-    color: var(--color-3);
-    font-family: 'Rubik', sans-serif;
+	background-color: #191919;
+	color: var(--color-3);
+	font-family: 'Rubik', sans-serif;
 }
 .tooltip.bs-tooltip-right .arrow:before {
-    border-right-color: #191919 !important;
+	border-right-color: #191919 !important;
 }
 .tooltip.bs-tooltip-left .arrow:before {
-    border-left-color: #191919 !important;
+	border-left-color: #191919 !important;
 }
 .tooltip.bs-tooltip-bottom .arrow:before {
-    border-bottom-color: #191919 !important;
+	border-bottom-color: #191919 !important;
 }
 .tooltip.bs-tooltip-top .arrow:before {
-    border-top-color: #191919 !important;
+	border-top-color: #191919 !important;
 }
 
 header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 10;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 10;
 }
 
 @supports (position: sticky) {
-    body {
-        padding-top: 0;
-    }
-    header {
-        /* position: sticky; */
-    }
+	body {
+		padding-top: 0;
+	}
+	header {
+		/* position: sticky; */
+	}
 }
 
 .navbar-main {
-    position: absolute;
-    height: 12px;
-    width: 100%;
-    transition: 1s ease;
-    visibility: hidden;
+	position: absolute;
+	height: 12px;
+	width: 100%;
+	transition: 1s ease;
+	visibility: hidden;
 }
 
 .navbar-main .nav {
-    margin: 0;
-    padding: 0;
-    /* display: inline-block; */
-    float: right;
-    margin-right: 5%;
+	margin: 0;
+	padding: 0;
+	/* display: inline-block; */
+	float: right;
+	margin-right: 5%;
 }
 
 .navbar-main .nav .item {
-    list-style: none;
-    display: inline-block;
-    font-size: 14px;
-    padding: 0 15px 0 15px;
-    line-height: 80px;
-    /* transition: 2s ease; */
-    opacity: 0;
+	list-style: none;
+	display: inline-block;
+	font-size: 14px;
+	padding: 0 15px 0 15px;
+	line-height: 80px;
+	/* transition: 2s ease; */
+	opacity: 0;
 }
 
 .navbar-main .nav .item a {
-    text-decoration: none;
-    color: var(--color-3);
+	text-decoration: none;
+	color: var(--color-3);
 }
 
 .navbar-main .logo {
-    display: none;
-    /* float: left;
+	display: none;
+	/* float: left;
     display: inline-block;
     margin-top: 20px;
     margin-left: 5%;
@@ -152,505 +158,505 @@ header {
 }
 
 .navbar-main .logo img {
-    display: none;
+	display: none;
 }
 
 .scrolled {
-    visibility: visible;
+	visibility: visible;
 }
 
 .scrolled.navbar-main {
-    height: 60px;
-    background-color: var(--color-3);
-    transition: 1s ease;
-    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.4);
+	height: 60px;
+	background-color: var(--color-3);
+	transition: 1s ease;
+	box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.4);
 }
 
 .scrolled.navbar-main .nav .item {
-    line-height: 80px;
-    transition: 3s ease;
-    opacity: 1;
+	line-height: 80px;
+	transition: 3s ease;
+	opacity: 1;
 }
 
 .scrolled.navbar-main .nav .item a {
-    line-height: 80px;
-    transition: .5s ease;
-    text-decoration: none;
-    color: var(--color-1);
+	line-height: 80px;
+	transition: .5s ease;
+	text-decoration: none;
+	color: var(--color-1);
 }
 
 .scrolled.navbar-main .nav .item a:hover {
-    transition: .5s ease;
-    color: var(--color-5);
+	transition: .5s ease;
+	color: var(--color-5);
 }
 
 .scrolled.navbar-main .logo {
-    float: left;
-    display: inline-block;
-    margin-top: 3px;
-    margin-left: 5%;
-    width: auto;
-    height: 90%;
-    /* transition: 4s ease; */
+	float: left;
+	display: inline-block;
+	margin-top: 3px;
+	margin-left: 5%;
+	width: auto;
+	height: 90%;
+	/* transition: 4s ease; */
 }
 
 /* Background Color */
 
 .bg-1 {
-    background-color: var(--color-1)!important;
+	background-color: var(--color-1) !important;
 }
 
 .bg-2 {
-    background-color: var(--color-2)!important;
+	background-color: var(--color-2) !important;
 }
 
 .bg-3 {
-    background-color: var(--color-3)!important;
+	background-color: var(--color-3) !important;
 }
 
 .bg-4 {
-    background-color: var(--color-4)!important;
+	background-color: var(--color-4) !important;
 }
 
 .bg-5 {
-    background-color: var(--color-5)!important;
+	background-color: var(--color-5) !important;
 }
 
 .bg-6 {
-    background-color: var(--color-6)!important;
+	background-color: var(--color-6) !important;
 }
 
 /* Fill polygon */
 
 .fill-bg-1 {
-    fill: var(--color-1)!important;
+	fill: var(--color-1) !important;
 }
 
 .fill-bg-2 {
-    fill: var(--color-2)!important;
+	fill: var(--color-2) !important;
 }
 
 .fill-bg-3 {
-    fill: var(--color-3)!important;
+	fill: var(--color-3) !important;
 }
 
 .fill-bg-4 {
-    fill: var(--color-4)!important;
+	fill: var(--color-4) !important;
 }
 
 .fill-bg-5 {
-    fill: var(--color-5)!important;
+	fill: var(--color-5) !important;
 }
 
 .fill-bg-6 {
-    fill: var(--color-6)!important;
+	fill: var(--color-6) !important;
 }
 
 /* Font Colors and Gradients */
 
 .font-1 {
-    color: var(--font-1);
+	color: var(--font-1);
 }
 
 .font-2 {
-    color: var(--font-2);
+	color: var(--font-2);
 }
 
 .font-3 {
-    color: var(--font-3);
+	color: var(--font-3);
 }
 
 .font-4 {
-    color: var(--font-4);
+	color: var(--font-4);
 }
 
 .style-1 {
-    font-family: 'Open Sans', sans-serif;
+	font-family: 'Open Sans', sans-serif;
 }
 
 .style-2 {
-    font-family: 'Roboto Slab', serif;
+	font-family: 'Roboto Slab', serif;
 }
 
 .style-3 {
-    font-family: 'Rubik', sans-serif;
+	font-family: 'Rubik', sans-serif;
 }
 
 .fnt-wrk-des {
-    font-size: 72px;
-    font-weight: 400;
+	font-size: 72px;
+	font-weight: 400;
 }
 
 .gradient-cater2me {
-    background: -webkit-linear-gradient(#1504af, #13213d);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+	background: -webkit-linear-gradient(#1504af, #13213d);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
 
 .gradient-cinememes {
-    background: -webkit-linear-gradient(#2740ff, #004e92);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+	background: -webkit-linear-gradient(#2740ff, #004e92);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
 
 .gradient-book {
-    background: -webkit-linear-gradient(#157FFB, #2e2e2e);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+	background: -webkit-linear-gradient(#157ffb, #2e2e2e);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
 
 .gradient-gold {
-    background: -webkit-linear-gradient(#E0A77D, rgb(121, 127, 134));
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+	background: -webkit-linear-gradient(#e0a77d, rgb(121, 127, 134));
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
 
 /* Gradient */
 
 .bg-gradient-black {
-    background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 75%, rgba(46, 46, 46, 1) 100%);
+	background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 75%, rgba(46, 46, 46, 1) 100%);
 }
 
 .bg-gradient-fade {
-    background: linear-gradient(180deg, rgba(25, 29, 30, 1) 0%, rgba(46, 46, 46, 1) 5%, rgba(46, 46, 46, 1) 100%);
+	background: linear-gradient(180deg, rgba(25, 29, 30, 1) 0%, rgba(46, 46, 46, 1) 5%, rgba(46, 46, 46, 1) 100%);
 }
 
 .bg-gradient-blue {
-    background: linear-gradient(#157FFB, #2e2e2e);
+	background: linear-gradient(#157ffb, #2e2e2e);
 }
 
 .box-shadow-card {
-    -webkit-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.75);
-    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.75);
+	-webkit-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.75);
+	box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.75);
 }
 
 .separator {
-    top: auto;
-    right: 0;
-    left: 0;
-    overflow: hidden;
-    width: 100%;
-    transform: translateZ(-1);
-    pointer-events: none;
+	top: auto;
+	right: 0;
+	left: 0;
+	overflow: hidden;
+	width: 100%;
+	transform: translateZ(-1);
+	pointer-events: none;
 }
 
 /* Sections */
 
 .intro-section {
-    overflow: hidden;
-    background-color: var(--color-6);
-    display: grid;
-    grid-template-columns: repeat(8, auto);
+	overflow: hidden;
+	background-color: var(--color-6);
+	display: grid;
+	grid-template-columns: repeat(8, auto);
 }
 
 #about-me {
-    padding-top: 8rem;
-    padding-bottom: 8rem;
-    text-align: center;
+	padding-top: 8rem;
+	padding-bottom: 8rem;
+	text-align: center;
 }
 
 #about-me a:hover {
-    color: var(--color-2);
+	color: var(--color-2);
 }
 
 .anime-grid {
-    font-family: 'Roboto Slab', serif;
-    background-color: #F0F0F0;
-    height: 100vh;
-    transition: background-color 1s;
+	font-family: 'Roboto Slab', serif;
+	background-color: #f0f0f0;
+	height: 100vh;
+	transition: background-color 1s;
 }
 
 /* New  */
 
 .first-name-div {
-    opacity: 0;
-    display: flex;
-    /* margin-left: 3%; */
-    justify-content: space-around;
-    top: 20%;
-    position: absolute;
-    width: 99%;
+	opacity: 0;
+	display: flex;
+	/* margin-left: 3%; */
+	justify-content: space-around;
+	top: 20%;
+	position: absolute;
+	width: 99%;
 }
 
 .last-name-div {
-    opacity: 0;
-    display: flex;
-    /* margin-left: 3%; */
-    justify-content: space-around;
-    top: 30%;
-    position: absolute;
-    width: 99%;
-    margin-top: 3%;
+	opacity: 0;
+	display: flex;
+	/* margin-left: 3%; */
+	justify-content: space-around;
+	top: 30%;
+	position: absolute;
+	width: 99%;
+	margin-top: 3%;
 }
 
 .first-name {
-    font-family: 'Rubik', sans-serif;
-    flex: none;
-    color: var(--color-1);
-    /* padding-right: 8.5%; */
-    text-align: center;
-    font-size: 80px;
-    font-weight: 400;
-    transition: color .5s;
+	font-family: 'Rubik', sans-serif;
+	flex: none;
+	color: var(--color-1);
+	/* padding-right: 8.5%; */
+	text-align: center;
+	font-size: 80px;
+	font-weight: 400;
+	transition: color .5s;
 }
 
 .last-name {
-    font-family: 'Rubik', sans-serif;
-    flex: none;
-    color: var(--color-5);
-    /* padding-right: 9%; */
-    text-align: center;
-    font-size: 80px;
-    font-weight: 400;
-    transition: color .5s;
+	font-family: 'Rubik', sans-serif;
+	flex: none;
+	color: var(--color-5);
+	/* padding-right: 9%; */
+	text-align: center;
+	font-size: 80px;
+	font-weight: 400;
+	transition: color .5s;
 }
 
 .anime-dev-box {
-    opacity: 0;
-    text-align: center;
-    top: 20%;
-    left: 10%;
-    position: absolute;
-    text-align: center;
-    font-size: 1em;
-    font-weight: 300;
-    height: 300px;
-    width: 30%;
-    border-right-width: thick;
-    border-right-color: var(--color-5);
-    border-right-style: solid;
+	opacity: 0;
+	text-align: center;
+	top: 20%;
+	left: 10%;
+	position: absolute;
+	text-align: center;
+	font-size: 1em;
+	font-weight: 300;
+	height: 300px;
+	width: 30%;
+	border-right-width: thick;
+	border-right-color: var(--color-5);
+	border-right-style: solid;
 }
 
 .anime-dev-box span {
-    bottom: 0%;
-    left: 10%;
-    width: 100%;
-    /* margin-right: 10%; */
-    position: absolute;
+	bottom: 0%;
+	left: 10%;
+	width: 100%;
+	/* margin-right: 10%; */
+	position: absolute;
 }
 
 .anime-dev-box ul {
-    top: 85%;
-    left: -40%;
-    width: 100%;
-    /* margin-right: 10%; */
-    position: absolute;
+	top: 85%;
+	left: -40%;
+	width: 100%;
+	/* margin-right: 10%; */
+	position: absolute;
 }
 
 .anime-dev-box li {
-    display: inline;
-    padding: 1rem;
+	display: inline;
+	padding: 1rem;
 }
 
 .anime-dev-box li a {
-    color: var(--color-2);
+	color: var(--color-2);
 }
 
 .welcome-section {
-    min-height: 100vh;
-    text-align: center;
-    padding-top: 80px;
+	min-height: 100vh;
+	text-align: center;
+	padding-top: 80px;
 }
 
 /* Work card section styles */
 
 .work-container {
-    position: relative;
+	position: relative;
 }
 
 .vertical-center {
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
 }
 
 .wrk-txt-fade {
-    opacity: 0;
-    font-size: 1.2vw;
-    line-height: 140%;
+	opacity: 0;
+	font-size: 1.2vw;
+	line-height: 140%;
 }
 
 .container-left {
-    opacity: 0;
-    max-width: 80%;
-    margin-right: auto;
+	opacity: 0;
+	max-width: 80%;
+	margin-right: auto;
 }
 
 .container-right {
-    opacity: 0;
-    max-width: 80%;
-    margin-left: auto;
+	opacity: 0;
+	max-width: 80%;
+	margin-left: auto;
 }
 
 .card-title {
-    font-size: 2vw;
+	font-size: 2vw;
 }
 
 .badge-primary {
-    font-size: 12px;
+	font-size: 12px;
 }
 
 button {
-    font-family: 'Rubik', sans-serif;
-    border-color: var(--color-5);
-    border-width: 1px;
-    border-style: solid;
-    background-color: transparent;
-    font-size: 14px;
-    font-weight: 200;
-    width: 60%;
-    height: 3rem;
-    margin-top: 30px;
-    color: var(--font-1);
-    transition: .5s;
+	font-family: 'Rubik', sans-serif;
+	border-color: var(--color-5);
+	border-width: 1px;
+	border-style: solid;
+	background-color: transparent;
+	font-size: 14px;
+	font-weight: 200;
+	width: 60%;
+	height: 3rem;
+	margin-top: 30px;
+	color: var(--font-1);
+	transition: .5s;
 }
 
 button:hover {
-    border-color: var(--color-5);
-    border-width: 1px;
-    border-style: solid;
-    background-color: var(--color-5);
-    width: 60%;
-    height: 3rem;
-    margin-top: 30px;
-    color: var(--font-3);
-    transition: .5s;
+	border-color: var(--color-5);
+	border-width: 1px;
+	border-style: solid;
+	background-color: var(--color-5);
+	width: 60%;
+	height: 3rem;
+	margin-top: 30px;
+	color: var(--font-3);
+	transition: .5s;
 }
 
 .fa-long-arrow-right {
-    font-size: medium;
+	font-size: medium;
 }
 
 .imac-image {
-    width: 90%;
-    margin-top: -200px;
-    overflow: hidden;
+	width: 90%;
+	margin-top: -200px;
+	overflow: hidden;
 }
 
 /* Bottom Icons */
 
 .skill-icons {
-    padding: 0rem 0rem 3rem 0rem;
-    overflow: hidden;
+	padding: 0rem 0rem 3rem 0rem;
+	overflow: hidden;
 }
 
 .icon-anime {
-    position: relative;
-    left: -1200px;
-    top: 1200px;
+	position: relative;
+	left: -1200px;
+	top: 1200px;
 }
 
 .icon-anime i {
-    color: var(--color-5);
+	color: var(--color-5);
 }
 
 .info {
-    background-image: url(/css/images/outdoor.jpg);
-    background-repeat: no-repeat;
-    background-size: auto 100%;
+	background-image: url(/css/images/outdoor.jpg);
+	background-repeat: no-repeat;
+	background-size: auto 100%;
 }
 
 #info-icons {
-    opacity: 0;
-    padding-top: 120px;
+	opacity: 0;
+	padding-top: 120px;
 }
 
 #info-icons i {
-    color: #7e7e7e;
-    text-decoration: none;
-    padding-top: 25px;
+	color: #7e7e7e;
+	text-decoration: none;
+	padding-top: 25px;
 }
 
 #info-icons a {
-    text-decoration: none;
+	text-decoration: none;
 }
 
 footer {
-    padding: 50px 0 20px 0;
-    color: #3f3f3f;
+	padding: 50px 0 20px 0;
+	color: #3f3f3f;
 }
 
 .mg-responsive {
-    margin: 25px;
-    width: auto;
+	margin: 25px;
+	width: auto;
 }
 
 .invis {
-    display: none;
-    transform: 6s;
+	display: none;
+	transform: 6s;
 }
 
 #icon-3 {
-    cursor: pointer;
+	cursor: pointer;
 }
 
 #resume-mb {
-    width: 60%;
+	width: 60%;
 }
 
 /* Media Query Start */
 
 @media (max-width: 1100px) {
-    button {
-        width: 60%;
-        height: 30px;
-        margin-top: 20px;
-    }
-    button:hover {
-        height: 30px;
-        margin-top: 15px;
-    }
-    .badge-primary {
-        font-size: 9px;
-        margin: 1px;
-    }
-    .first-name {
-        font-size: 120px;
-    }
-    .last-name {
-        font-size: 120px;
-    }
-    .anime-dev-box {
-        width: 70%;
-        height: 400px;
-        top: 20%;
-    }
-    .wrk-txt-fade p {
-        font-size: 12px;
-        line-height: 1.2;
-    }
+	button {
+		width: 60%;
+		height: 30px;
+		margin-top: 20px;
+	}
+	button:hover {
+		height: 30px;
+		margin-top: 15px;
+	}
+	.badge-primary {
+		font-size: 9px;
+		margin: 1px;
+	}
+	.first-name {
+		font-size: 120px;
+	}
+	.last-name {
+		font-size: 120px;
+	}
+	.anime-dev-box {
+		width: 70%;
+		height: 400px;
+		top: 20%;
+	}
+	.wrk-txt-fade p {
+		font-size: 12px;
+		line-height: 1.2;
+	}
 }
 
 @media (max-width: 991px) {
-    .card-title {
-        font-size: 3vw;
-    }
-    .wrk-txt-fade {
-        min-height: 250px;
-        line-height: 200%;
-    }
-    .badge-primary {
-        font-size: 11px;
-        margin: 0px;
-    }
-    .first-name {
-        font-size: 80px;
-    }
-    .last-name {
-        font-size: 80px;
-    }
-    .anime-dev-box {
-        width: 75%;
-        height: 300px;
-        top: 20%;
-    }
+	.card-title {
+		font-size: 3vw;
+	}
+	.wrk-txt-fade {
+		min-height: 250px;
+		line-height: 200%;
+	}
+	.badge-primary {
+		font-size: 11px;
+		margin: 0px;
+	}
+	.first-name {
+		font-size: 80px;
+	}
+	.last-name {
+		font-size: 80px;
+	}
+	.anime-dev-box {
+		width: 75%;
+		height: 300px;
+		top: 20%;
+	}
 }
 
 /* @media (max-width: 830px) {
@@ -668,341 +674,345 @@ footer {
 } */
 
 @media (max-width: 700px) {
-    .card-title {
-        font-size: 4vw;
-    }
-    .wrk-txt-fade {
-        font-size: 1vw;
-        /* new way, if supported */
-        line-height: 1;
-    }
-    .badge-primary {
-        font-size: 8px;
-        margin: 1px;
-    }
-    button {
-        font-size: 10px;
-        font-weight: 200;
-        width: 60%;
-        height: 1.5rem;
-        margin-top: 20px;
-    }
-    button:hover {
-        height: 1.5rem;
-        margin-top: 20px;
-    }
-    #info-icons {
-        padding-top: 20px;
-    }
-    .first-name {
-        font-size: 60px;
-    }
-    .last-name {
-        font-size: 60px;
-    }
-    /* .anime-dev-box { 
+	.card-title {
+		font-size: 4vw;
+	}
+	.wrk-txt-fade {
+		font-size: 1vw;
+		/* new way, if supported */
+		line-height: 1;
+	}
+	.badge-primary {
+		font-size: 8px;
+		margin: 1px;
+	}
+	button {
+		font-size: 10px;
+		font-weight: 200;
+		width: 60%;
+		height: 1.5rem;
+		margin-top: 20px;
+	}
+	button:hover {
+		height: 1.5rem;
+		margin-top: 20px;
+	}
+	#info-icons {
+		padding-top: 20px;
+	}
+	.first-name {
+		font-size: 60px;
+	}
+	.last-name {
+		font-size: 60px;
+	}
+	/* .anime-dev-box { 
         width: 80%;
         height: 400px;
         top: 20%;
     } */
-    #logo-name {
-        display: none;
-    }
-    .navbar-main {
-        margin: 0%;
-        padding: 0%;
-        display: flex;
-        justify-content: space-around;
-    }
-    .navbar-main .nav {
-        margin: 0%;
-        padding: 0%;
-    }
+	#logo-name {
+		display: none;
+	}
+	.navbar-main {
+		margin: 0%;
+		padding: 0%;
+		display: flex;
+		justify-content: space-around;
+	}
+	.navbar-main .nav {
+		margin: 0%;
+		padding: 0%;
+	}
 }
 
 @media (max-width: 500px) {
-    .separator {
-        display: none;
-    }
-    .card-title {
-        font-size: 22px;
-    }
-    .wrk-txt-fade {
-        height: 40px;
-    }
-    .wrk-txt-fade p {
-        font-size: 10px;
-        line-height: 1.2;
-    }
-    .badge-primary {
-        font-size: 7px;
-        margin: 1px;
-    }
-    #info-icons .h3 {
-        font-size: x-large;
-    }
-    .first-name {
-        font-size: 55px;
-    }
-    .last-name {
-        font-size: 55px;
-    }
-    .anime-dev-box {
-        width: 85%;
-        height: 250px;
-        top: 20%;
-    }
-    .anime-dev-box span {
-        padding-left: 20%;
-    }
-    .container-left {
-        opacity: 0;
-        min-width: 95%;
-        padding: 0;
-        position: relative;
-        right: 10%;
-    }
-    .container-right {
-        opacity: 0;
-        min-width: 95%;
-        padding: 0;
-        position: relative;
-        left: 10%;
-    }
-    .wrk-txt-fade p {
-        font-size: 12px;
-        font-weight: 600;
-    }
+	.separator {
+		display: none;
+	}
+	.card-title {
+		font-size: 22px;
+	}
+	.wrk-txt-fade {
+		height: 40px;
+	}
+	.wrk-txt-fade p {
+		font-size: 10px;
+		line-height: 1.2;
+	}
+	.badge-primary {
+		font-size: 7px;
+		margin: 1px;
+	}
+	#info-icons .h3 {
+		font-size: x-large;
+	}
+	.first-name {
+		font-size: 55px;
+	}
+	.last-name {
+		font-size: 55px;
+	}
+	.anime-dev-box {
+		width: 85%;
+		height: 250px;
+		top: 20%;
+	}
+	.anime-dev-box span {
+		padding-left: 20%;
+	}
+	.container-left {
+		opacity: 0;
+		min-width: 95%;
+		padding: 0;
+		position: relative;
+		right: 10%;
+	}
+	.container-right {
+		opacity: 0;
+		min-width: 95%;
+		padding: 0;
+		position: relative;
+		left: 10%;
+	}
+	.wrk-txt-fade p {
+		font-size: 12px;
+		font-weight: 600;
+	}
 }
 
 @media (max-width: 350px) {
-    .card-title {
-        font-size: 18px;
-    }
-    .wrk-txt-fade {
-        height: 40px;
-    }
-    .wrk-txt-fade p {
-        font-size: 10px;
-        /* new way, if supported */
-        line-height: 1.2;
-    }
-    .badge-primary {
-        font-size: 7px;
-        margin: 1px;
-    }
-    #info-icons .h3 {
-        font-size: medium;
-    }
-    .first-name {
-        font-size: 45px;
-    }
-    .last-name {
-        font-size: 45px;
-    }
-    .anime-dev-box {
-        width: 85%;
-        height: 200px;
-        top: 20%;
-    }
-    .anime-dev-box span {
-        padding-left: 35%;
-    }
+	.card-title {
+		font-size: 18px;
+	}
+	.wrk-txt-fade {
+		height: 40px;
+	}
+	.wrk-txt-fade p {
+		font-size: 10px;
+		/* new way, if supported */
+		line-height: 1.2;
+	}
+	.badge-primary {
+		font-size: 7px;
+		margin: 1px;
+	}
+	#info-icons .h3 {
+		font-size: medium;
+	}
+	.first-name {
+		font-size: 45px;
+	}
+	.last-name {
+		font-size: 45px;
+	}
+	.anime-dev-box {
+		width: 85%;
+		height: 200px;
+		top: 20%;
+	}
+	.anime-dev-box span {
+		padding-left: 35%;
+	}
 }
 
 /* Smartphones (portrait and landscape) ----------- */
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-    /* Styles */
+	/* Styles */
 }
 
 /* Smartphones (landscape) ----------- */
 
-@media only screen and (min-width: 321px) {}
+@media only screen and (min-width: 321px) {
+}
 
 /* Smartphones (portrait) ----------- */
 
 @media only screen and (max-width: 320px) {
-    /* Styles */
+	/* Styles */
 }
 
 /* iPads (portrait and landscape) ----------- */
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-    .anime-dev-box {
-        width: 75%;
-        height: 400px;
-        top: 20%;
-    }
-    .anime-dev-box span {
-        padding-left: 35%;
-    }
+	.anime-dev-box {
+		width: 75%;
+		height: 400px;
+		top: 20%;
+	}
+	.anime-dev-box span {
+		padding-left: 35%;
+	}
 }
 
 /* iPads (landscape) ----------- */
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
-    .anime-dev-box {
-        width: 75%;
-        height: 300px;
-        top: 20%;
-    }
-    .anime-dev-box span {
-        padding-left: 35%;
-    }
+	.anime-dev-box {
+		width: 75%;
+		height: 300px;
+		top: 20%;
+	}
+	.anime-dev-box span {
+		padding-left: 35%;
+	}
 }
 
 /* iPads (portrait) ----------- */
 
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+}
 
 /**********
     iPad 3
     **********/
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
-    /* Styles */
+	/* Styles */
 }
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
-    /* Styles */
+	/* Styles */
 }
 
 /* Desktops and laptops ----------- */
 
-@media only screen and (min-width: 1224px) {}
+@media only screen and (min-width: 1224px) {
+}
 
 /* Large screens ----------- */
 
 @media only screen and (min-width: 1824px) {
-    /* Styles */
+	/* Styles */
 }
 
 /* iPhone 4 ----------- */
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
-    /* Styles */
+	/* Styles */
 }
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
-    /* Styles */
+	/* Styles */
 }
 
 /* iPhone 5 ----------- */
 
 @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
-    .last-name-div {
-        margin-top: 30px;
-    }
+	.last-name-div {
+		margin-top: 30px;
+	}
 }
 
 @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
-    /* Styles */
+	/* Styles */
 }
 
 /* iPhone 6, 7, 8 ----------- */
 
 @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
-    .anime-dev-box {
-        width: 75%;
-        height: 200px;
-        top: 20%;
-    }
-    .anime-dev-box span {
-        padding-left: 35%;
-    }
-    .first-name {
-        font-size: 60px;
-    }
-    .last-name {
-        font-size: 60px;
-    }
+	.anime-dev-box {
+		width: 75%;
+		height: 200px;
+		top: 20%;
+	}
+	.anime-dev-box span {
+		padding-left: 35%;
+	}
+	.first-name {
+		font-size: 60px;
+	}
+	.last-name {
+		font-size: 60px;
+	}
 }
 
 @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
-    /* Styles */
+	/* Styles */
 }
 
 /* iPhone 6+, 7+, 8+ ----------- */
 
 @media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
-    .anime-dev-box {
-        width: 75%;
-        height: 200px;
-        top: 20%;
-    }
-    .anime-dev-box span {
-        padding-left: 35%;
-    }
-    .first-name {
-        font-size: 70px;
-    }
-    .last-name {
-        font-size: 70px;
-    }
+	.anime-dev-box {
+		width: 75%;
+		height: 200px;
+		top: 20%;
+	}
+	.anime-dev-box span {
+		padding-left: 35%;
+	}
+	.first-name {
+		font-size: 70px;
+	}
+	.last-name {
+		font-size: 70px;
+	}
 }
 
 @media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
-    /* Styles */
+	/* Styles */
 }
 
 /* iPhone X ----------- */
 
 @media only screen and (min-device-width: 375px) and (max-device-height: 812px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
-    .anime-dev-box {
-        width: 75%;
-        height: 200px;
-        top: 20%;
-    }
-    .anime-dev-box span {
-        padding-left: 35%;
-    }
-    .first-name {
-        font-size: 70px;
-    }
-    .last-name {
-        font-size: 70px;
-    }
+	.anime-dev-box {
+		width: 75%;
+		height: 200px;
+		top: 20%;
+	}
+	.anime-dev-box span {
+		padding-left: 35%;
+	}
+	.first-name {
+		font-size: 70px;
+	}
+	.last-name {
+		font-size: 70px;
+	}
 }
 
 @media only screen and (min-device-width: 375px) and (max-device-height: 812px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
-    /* Styles */
+	/* Styles */
 }
 
 /* iPhone XS Max, XR ----------- */
 
 @media only screen and (min-device-width: 414px) and (max-device-height: 896px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
-    /* Styles */
+	/* Styles */
 }
 
 @media only screen and (min-device-width: 414px) and (max-device-height: 896px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
-    /* Styles */
+	/* Styles */
 }
 
 /* Samsung Galaxy S3 ----------- */
 
 @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
-    /* Styles */
+	/* Styles */
 }
 
 @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
-    /* Styles */
+	/* Styles */
 }
 
 /* Samsung Galaxy S4 ----------- */
 
 @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
-    /* Styles */
+	/* Styles */
 }
 
 @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
-    /* Styles */
+	/* Styles */
 }
 
 /* Samsung Galaxy S5 ----------- */
 
-@media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {}
+@media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
+}
 
 @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
-    /* Styles */
+	/* Styles */
 }
