@@ -725,6 +725,10 @@ footer {
 		margin: 0%;
 		padding: 0%;
 	}
+	#resume-mb {
+		width: 80%;
+		height: 480px;
+	}
 }
 
 @media (max-width: 500px) {
@@ -782,6 +786,13 @@ footer {
 	}
 }
 
+@media (max-width: 435px) {
+	#resume-mb {
+		width: 80%;
+		height: 380px;
+	}
+}
+
 @media (max-width: 350px) {
 	.card-title {
 		font-size: 18px;
@@ -814,6 +825,10 @@ footer {
 	}
 	.anime-dev-box span {
 		padding-left: 35%;
+	}
+	#resume-mb {
+		width: 80%;
+		height: 280px;
 	}
 }
 
