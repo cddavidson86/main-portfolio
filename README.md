@@ -3,7 +3,7 @@
 [Portfolio](https://charlesdavidson.net/)
 
 
-# Charles Davidsons Portfolio
+# Charles Davidson - Portfolio
 
 Built as a primary form of project demonstration. 
 
