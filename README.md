@@ -1,6 +1,6 @@
 ## Welcome to GitHub Pages
 
-[Portfolio](charlesdavidson.net).
+[Portfolio](charlesdavidson.net)
 
 
 ### Charles Davidsons Portfolio
