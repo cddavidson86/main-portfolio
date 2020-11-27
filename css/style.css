@@ -530,6 +530,10 @@ button:hover {
 	transition: .5s;
 }
 
+button:focus {
+	outline: none !important;
+}
+
 .fa-long-arrow-right {
 	font-size: medium;
 }
